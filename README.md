@@ -1,7 +1,7 @@
-# Proejct Description: The Transport Layer and ARQ Implementation
+# The Transport Layer and ARQ Implementation
 
 
-In this project, I have implemented two well-known ARQ protocols, stop and wait and selective repeat. As these protocols are wellknown in the computer network community, there is no need for further discussion. Instead, here we will denote some implementation facets.
+In this project, we have implemented two ARQ protocols, stop and wait and selective repeat. Since these protocols are well-known in the computer network community, there is no need for further discussion. Instead, here we will denote some implementation facets.
 
 ### Segments and Acks Structure
 1.	Sequence number:  
@@ -15,7 +15,8 @@ In this project, I have implemented two well-known ARQ protocols, stop and wait 
 
 ### Stop and Wait Specification
 Stop and wait ARQ has multiple variations, but we have implemented the most advanced version in this project. The sender FSM of this stop and wait ARQ is introduced in figure 3.15 as rdt3.0 (page 245 of the reference book, computer networks: a top down approach. Edition 6). By looking at this FSM, we can see that this ARQ encounters noisy channels that packets can be lost or corrupted while passing through it.
-Summary of specifications:
+
+### Summary of specifications
 1. we have Used timers for handling packet loss
 2. we have Used checksum to check whether receiving packet/ack is corrupted or not.
 3. we have Used sequence number as its obvious why.
@@ -29,7 +30,7 @@ As it is known, this ARQ is far more effective than stop and wait ARQ. Everythin
 ### Simulation and Results
 1. Simulate packet loss with a probability of P. we receive a P (where 0≤P≤1) from the command line (as one of your arguments). Then, upon receiving packets in the receiver, generate a random number 0≤r≤1. Whenever r≤P discard the received packet.
 2. Alter one bit (choose this randomly) with the probability of 0.01 at sender using the exact mechanism as the above statement.
-3. we have prepared average results for this project. For each of the following parts, you have to repeat the simulation five times, then report the average of those iterations in your report.
+3. we have prepared average results for this project. For each of the following parts, you have to repeat the simulation five times, then report the average of those iterations in your report.  
   a. Simulate delay over MSS. MSS starts from 100-bytes and goes up to 1000-bytes in 100-bytes steps.  
   b. Simulate delay over window size. Window size starts from 1 and goes up to 64 doubling at each step.  
   c. Simulate delay over P. P starts from 0 and goes up to 0.2, and increases by 0.01 at each step.  
