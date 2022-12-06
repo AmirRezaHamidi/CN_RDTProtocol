@@ -41,3 +41,5 @@ As it is known, this ARQ is far more effective than stop and wait ARQ. Everythin
 1. we have Used UDP for both cases.
 2. we can send a file over these ARQs. (a generated a simple text file).
 3. Window size, MSS, P, and filename can be optain from arguments but it is not necessary
+
+Further Details are Available at Work Report.pdf file.
